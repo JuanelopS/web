@@ -2,11 +2,9 @@ version: '3.8'
 
 services:
   web-app:
-    image: nginx:1.25-alpine
+    build: .
     container_name: web-container
     restart: always
-    volumes:
-      - ./html:/usr/share/nginx/html
     networks:
       - web-network
 
