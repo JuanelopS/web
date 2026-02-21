@@ -16,4 +16,52 @@
         <a href="https://github.com/juanelops" target="_blank">Mi github</a>
     </div>
 </body>
-</html>
+</html><style>
+    body {
+        margin: 0;
+        background: radial-gradient(circle at center, #1e1e2e 0%, #121212 100%);
+        overflow: hidden;
+    }
+    div {
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+    }
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(90deg, #00ffcc, #0077ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -1px;
+    }
+    p {
+        font-size: 1.2rem;
+        color: #a0a0a0;
+        margin-bottom: 2rem;
+    }
+    a:hover {
+        background-color: rgba(0, 255, 204, 0.1);
+        box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+        transition: 0.3s;
+    }
+    .cursor {
+        display: inline-block;
+        width: 10px;
+        height: 1.2rem;
+        background-color: #00ffcc;
+        margin-left: 5px;
+        animation: blink 1s infinite;
+        vertical-align: middle;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes blink {
+        50% { opacity: 0; }
+    }
+</style>
+<script>
+    // Un pequeño efecto de partículas o interactividad podría ir aquí
+    console.log("Bienvenido / Welcome / Bienvenue / Bem-vindo / Benvenuto / Willkommen / Welkom / Velkommen / Välkommen / 欢迎 / ようこそ / 환영합니다 / Tervetuloa / Witaj / Vítejte / Üdvözöljük / Bun venit / Hoş geldiniz / Benvingut / Ongi etorri / नमस्ते");
+</script>
