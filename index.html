@@ -1,50 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jugapi.dev</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #121212; color: white;}
-        a { color: #00ffcc; text-decoration: none; border: 1px solid #00ffcc ; padding: 10px; border-radius: 5px; margin-top: 20px; }
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            min-height: 100svh;
+            background-color: #121212;
+            color: white;
+        }
     </style>
 </head>
+
 <body>
     <div>
         <h1>Hola, soy Juan Gavira</h1>
         <p>Estamos en ello...</p>
-        <a href="https://github.com/juanelops" target="_blank">Mi github</a>
+        <a href="https://github.com/juanelops" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+                <defs>
+                    <clipPath id="cartoon-mask">
+                        <rect x="0" y="0" width="200" height="122" />
+                    </clipPath>
+
+                    <style>
+                        .cartoon-kitten {
+                            animation: peek-cartoon 6s cubic-bezier(0.4, 0.1, 0.3, 1.1) infinite;
+                        }
+
+                        @keyframes peek-cartoon {
+
+                            0%,
+                            10% {
+                                transform: translateY(50px);
+                            }
+
+                            /* totally hidden */
+                            20%,
+                            45% {
+                                transform: translateY(-60px);
+                            }
+
+                            /* show face */
+                            50%,
+                            55% {
+                                transform: translateY(-25px);
+                            }
+
+                            /* little move */
+                            60%,
+                            80% {
+                                transform: translateY(-30px);
+                            }
+
+                            /* pause */
+                            90%,
+                            100% {
+                                transform: translateY(50px);
+                            }
+
+                            /* hidden again */
+                        }
+
+                        .cartoon-outline {
+                            stroke: #333333;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                        }
+
+                        .github-logo-shape {
+                            fill: #6e5494;
+                            transition: fill 0.3s ease;
+                        }
+
+                        svg:hover .github-logo-shape {
+                            fill: #0077ff;
+                        }
+                    </style>
+                </defs>
+
+                <g clip-path="url(#cartoon-mask)">
+                    <g class="cartoon-kitten">
+                        <g transform="translate(0, 30)">
+                            <path d="M 70,80 C 60,55 65,30 85,35 C 95,40 92,65 90,80" fill="#44e256"
+                                class="cartoon-outline" />
+                            <path d="M 130,80 C 140,55 135,30 115,35 C 105,40 108,65 110,80" fill="#44e256"
+                                class="cartoon-outline" />
+                            <path d="M 74,75 C 68,58 72,42 82,45 C 88,48 86,65 85,75" fill="#F5D0BA" stroke="none" />
+                            <path d="M 126,75 C 132,58 128,42 118,45 C 112,48 114,65 115,75" fill="#F5D0BA"
+                                stroke="none" />
+
+                            <ellipse cx="100" cy="95" rx="38" ry="32" fill="#44e256" class="cartoon-outline" />
+
+                            <ellipse cx="84" cy="90" rx="6" ry="7" fill="#222" />
+                            <circle cx="82" cy="87" r="2" fill="white" />
+                            <ellipse cx="116" cy="90" rx="6" ry="7" fill="#222" />
+                            <circle cx="114" cy="87" r="2" fill="white" />
+                            <ellipse cx="100" cy="102" rx="16" ry="11" fill="#FFFAF0" class="cartoon-outline"
+                                stroke-width="2.5" />
+
+                            <path d="M 96,98 L 104,98 L 100,103 Z" fill="#FF8A8A" stroke="#333" stroke-width="1.5"
+                                stroke-linejoin="round" />
+
+                            <path d="M 96 105 Q 100 108 100 103 Q 100 108 104 105" fill="none" stroke="#333"
+                                stroke-width="2.5" stroke-linecap="round" />
+
+                            <g stroke="#333" stroke-width="2" stroke-linecap="round">
+                                <path d="M 65 98 L 45 92 M 65 103 L 45 103 M 65 108 L 45 114" />
+                                <path d="M 135 98 L 155 92 M 135 103 L 155 103 M 135 108 L 155 114" />
+                            </g>
+                        </g>
+                    </g>
+                </g>
+
+                <g id="github-front">
+                    <circle cx="100" cy="120" r="58" fill="white" />
+                    <g transform="translate(40, 60) scale(5)">
+                        <path class="github-logo-shape cartoon-outline" stroke-width="0.8"
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </g>
+                </g>
+            </svg>
+        </a>
     </div>
 </body>
-</html><style>
+
+</html>
+<style>
     body {
         margin: 0;
         background: radial-gradient(circle at center, #1e1e2e 0%, #121212 100%);
         overflow: hidden;
     }
+
     div {
         text-align: center;
         padding: 10px;
         animation: fadeIn 2s ease-in-out;
     }
+
     h1 {
         font-size: 3.5rem;
         margin-bottom: 0.5rem;
-        background: linear-gradient(90deg, #00ffcc, #0077ff);
+        background: linear-gradient(90deg, #7839d6, #0077ff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         letter-spacing: -1px;
     }
+
     p {
         font-size: 1.2rem;
         color: #a0a0a0;
         margin-bottom: 2rem;
     }
-    a:hover {
-        background-color: rgba(0, 255, 204, 0.1);
-        box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
-        transition: 0.3s;
-    }
+
     .cursor {
         display: inline-block;
         width: 10px;
@@ -54,12 +170,23 @@
         animation: blink 1s infinite;
         vertical-align: middle;
     }
+
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
+
     @keyframes blink {
-        50% { opacity: 0; }
+        50% {
+            opacity: 0;
+        }
     }
 </style>
 <script>
