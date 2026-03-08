@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 100svh;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    background: radial-gradient(circle at center, #1e1e2e 0%, #121212 100%);
+    overflow: hidden;
+}
+
+.cartoon-kitten {
+    animation: peek-cartoon 6s cubic-bezier(0.4, 0.1, 0.3, 1.1) infinite;
+}
+
+@keyframes peek-cartoon {
+
+    0%,
+    10% {
+        transform: translateY(50px);
+    }
+
+    /* totally hidden */
+    20%,
+    45% {
+        transform: translateY(-60px);
+    }
+
+    /* show face */
+    50%,
+    55% {
+        transform: translateY(-25px);
+    }
+
+    /* little move */
+    60%,
+    80% {
+        transform: translateY(-30px);
+    }
+
+    /* pause */
+    90%,
+    100% {
+        transform: translateY(50px);
+    }
+
+    /* hidden again */
+}
+
+.cartoon-outline {
+    stroke: #333333;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.github-logo-shape {
+    fill: #6e5494;
+    transition: fill 0.3s ease;
+}
+
+svg:hover .github-logo-shape {
+    fill: #0077ff;
+}
+
+div {
+    text-align: center;
+    padding: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #7839d6, #0077ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    margin-bottom: 2rem;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.2rem;
+    background-color: #ffffff;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
